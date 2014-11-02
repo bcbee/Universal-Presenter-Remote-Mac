@@ -11,7 +11,7 @@
 
 @implementation DBZ_ServerCommunication
 
-static NSString *serverAddress = @"http://universalpresenterremote.azurewebsites.net";
+static NSString *serverAddress = @"http://universalpresenterremote.com";
 static int uid = 10;
 static int temptoken = 10;
 static int controlmode = 0;
@@ -22,6 +22,8 @@ static NSTimer *timer;
 static NSTimer *activeTimer;
 static int errorCount = 0;
 
+static NSString *apns = @"";
+
 +(NSString*)serverAddress { return  serverAddress; }
 +(int)uid { return  uid; }
 +(int)temptoken { return  temptoken; }
@@ -29,6 +31,7 @@ static int errorCount = 0;
 +(NSInteger)token { return  token; }
 +(bool)serverAvailable { return  serverAvailable; }
 +(bool)enabled { return  enabled; }
++(NSString*)apns { return  apns; }
 
 +(void)setEnabled:(bool)changeto {
     if (enabled != changeto && changeto) {
@@ -210,6 +213,13 @@ static int errorCount = 0;
 
 +(void)connectSetup {
     token = temptoken;
+}
+
++(void)setupApns:(NSData *)deviceToken {
+    NSString *token = [[[[deviceToken description]stringByReplacingOccurrencesOfString:@"<"withString:@""]stringByReplacingOccurrencesOfString:@">" withString:@""]stringByReplacingOccurrencesOfString: @" " withString: @""];
+    apns = token;
+    NSNotification* notification = [NSNotification notificationWithName:@"APNSReady" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotification:notification];
 }
 
 @end

@@ -15,7 +15,6 @@
 		ED36A9B518F8702F001247AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED36A9B418F8702F001247AB /* main.m */; };
 		ED36A9B918F8702F001247AB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = ED36A9B718F8702F001247AB /* Credits.rtf */; };
 		ED36A9BC18F8702F001247AB /* DBZ_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED36A9BB18F8702F001247AB /* DBZ_AppDelegate.m */; };
-		ED36A9BF18F8702F001247AB /* MainMenuOld.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED36A9BD18F8702F001247AB /* MainMenuOld.xib */; };
 		ED36A9C118F8702F001247AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED36A9C018F8702F001247AB /* Images.xcassets */; };
 		ED36A9C818F8702F001247AB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED36A9C718F8702F001247AB /* XCTest.framework */; };
 		ED36A9C918F8702F001247AB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED36A9A818F8702F001247AB /* Cocoa.framework */; };
@@ -307,7 +306,6 @@
 				ED36A9E018F8706A001247AB /* DBZ_ConnectView.xib in Resources */,
 				B391DB9B1925CABD00634BA7 /* DBZ_InstructionView.xib in Resources */,
 				ED36A9B918F8702F001247AB /* Credits.rtf in Resources */,
-				ED36A9BF18F8702F001247AB /* MainMenuOld.xib in Resources */,
 				ED36A9E518F8707B001247AB /* DBZ_PresentView.xib in Resources */,
 				B3D9A9C819AD8C7F005DE28C /* MainMenu.xib in Resources */,
 			);
@@ -467,7 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -485,7 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

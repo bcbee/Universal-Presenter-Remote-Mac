@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6206.8"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -769,7 +770,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="418" height="209"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <size key="minSize" width="618" height="129"/>
+                                                        <size key="minSize" width="603" height="129"/>
                                                         <size key="maxSize" width="620" height="10000000"/>
                                                         <attributedString key="textStorage">
                                                             <fragment content="Universal Presenter Remote">
@@ -819,7 +820,7 @@ Cgo
                                                             </fragment>
                                                         </attributedString>
                                                         <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <size key="minSize" width="618" height="129"/>
+                                                        <size key="minSize" width="603" height="129"/>
                                                         <size key="maxSize" width="620" height="10000000"/>
                                                     </textView>
                                                 </subviews>

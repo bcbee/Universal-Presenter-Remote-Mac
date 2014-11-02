@@ -18,6 +18,7 @@
 +(NSInteger)token;
 +(bool)serverAvailable;
 +(bool)enabled;
++(NSString*)apns;
 +(void)setEnabled:(bool)changeto;
 
 +(void)getResponse:(NSString*)page withToken:(NSInteger)requestToken withHoldfor:(bool)holdfor;
@@ -34,5 +35,6 @@
 +(void)activeSessionCallback:(NSString*)response;
 +(void)checkSlide:(NSTimer *)timer;
 +(void)connectSetup;
++(void)setupApns:(NSData*)deviceToken;
 
 @end

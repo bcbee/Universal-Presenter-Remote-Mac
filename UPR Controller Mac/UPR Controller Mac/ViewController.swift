@@ -7,8 +7,9 @@
 //
 
 import Cocoa
+import WebKit
 
-class ViewController: NSViewController, NSTextFieldDelegate {
+class ViewController: NSViewController, NSTextFieldDelegate  {
                             
     @IBOutlet weak var tabController: NSTabView!
     @IBOutlet weak var token1: NSTextField!
@@ -19,12 +20,16 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var token6: NSTextField!
     @IBOutlet weak var connectButton: NSButton!
     
+    
+    @IBOutlet weak var QRView: WKWebView!
+    
     var tokenFields: [String] = ["","","","","",""]
     var tokenFieldObjects: [NSTextField] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "serverResponse:", name:"ServerResponse", object: nil)
@@ -37,6 +42,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         
         token1.becomeFirstResponder()
         
+
     }
 
     override var representedObject: AnyObject? {
@@ -110,8 +116,21 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     func updateInterface(notification: NSNotification) {
         if DBZ_ServerCommunication.enabled() {
             connectButton.title = "Disconnect"
+            token1.enabled = false
+            token2.enabled = false
+            token3.enabled = false
+            token4.enabled = false
+            token5.enabled = false
+            token6.enabled = false
         } else {
             connectButton.title = "Connect"
+            token1.enabled = true
+            token2.enabled = true
+            token3.enabled = true
+            token4.enabled = true
+            token5.enabled = true
+            token6.enabled = true
+            
         }
         connectButton.enabled = true
     }

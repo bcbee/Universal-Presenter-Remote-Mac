@@ -10,5 +10,6 @@
 #define UPR_Controller_Mac_Header_h
 
 #import "DBZ_ServerCommunication.h"
+#import "QRViewController.h"
 
 #endif

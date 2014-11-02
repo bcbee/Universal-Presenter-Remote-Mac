@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6206.8"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="6250"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -654,7 +655,7 @@
             </objects>
             <point key="canvasLocation" x="530" y="-11"/>
         </scene>
-        <!--UPR Controller Mac-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
@@ -725,7 +726,7 @@
                                                         <constraint firstAttribute="width" constant="30" id="8f2-3e-Ykl"/>
                                                         <constraint firstAttribute="height" constant="52" id="kqH-0d-csi"/>
                                                     </constraints>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="LNk-M2-Sma">
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="" drawsBackground="YES" id="LNk-M2-Sma">
                                                         <font key="font" metaFont="system" size="36"/>
                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -739,7 +740,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="GSC-Bz-su5"/>
                                                     </constraints>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="4LU-39-cR6">
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="" drawsBackground="YES" id="4LU-39-cR6">
                                                         <font key="font" metaFont="system" size="36"/>
                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -753,7 +754,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="UF0-H4-Wa6"/>
                                                     </constraints>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="YjQ-d4-kML">
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="" drawsBackground="YES" id="YjQ-d4-kML">
                                                         <font key="font" metaFont="system" size="36"/>
                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -767,7 +768,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="e4Q-KS-CXs"/>
                                                     </constraints>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="JMj-tE-6bx">
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="" drawsBackground="YES" id="JMj-tE-6bx">
                                                         <font key="font" metaFont="system" size="36"/>
                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -781,7 +782,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="Byx-fX-r12"/>
                                                     </constraints>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="QvJ-rA-VH3">
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="" drawsBackground="YES" id="QvJ-rA-VH3">
                                                         <font key="font" metaFont="system" size="36"/>
                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -792,7 +793,7 @@
                                                 </textField>
                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="meZ-5b-m1O">
                                                     <rect key="frame" x="232" y="74" width="30" height="52"/>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="eIA-bk-jL6">
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="" drawsBackground="YES" id="eIA-bk-jL6">
                                                         <font key="font" metaFont="system" size="36"/>
                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -837,15 +838,19 @@
                                             <rect key="frame" x="10" y="33" width="304" height="260"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Voc-Ql-CGr">
-                                                    <rect key="frame" x="39" y="123" width="226" height="29"/>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Coming Soon..." id="YO8-EM-4PE">
-                                                        <font key="font" metaFont="system" size="24"/>
-                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                    </textFieldCell>
-                                                </textField>
+                                                <containerView translatesAutoresizingMaskIntoConstraints="NO" id="anf-xE-yg6">
+                                                    <rect key="frame" x="17" y="17" width="270" height="227"/>
+                                                    <connections>
+                                                        <segue destination="VUJ-RD-Mlc" kind="embed" id="cJJ-99-5VO"/>
+                                                    </connections>
+                                                </containerView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="anf-xE-yg6" secondAttribute="trailing" constant="17" id="ONK-if-nka"/>
+                                                <constraint firstItem="anf-xE-yg6" firstAttribute="top" secondItem="Dph-tR-HTz" secondAttribute="top" constant="16" id="PNf-ry-OOy"/>
+                                                <constraint firstItem="anf-xE-yg6" firstAttribute="leading" secondItem="Dph-tR-HTz" secondAttribute="leading" constant="17" id="fZw-ye-D5f"/>
+                                                <constraint firstAttribute="bottom" secondItem="anf-xE-yg6" secondAttribute="bottom" constant="17" id="x44-Ce-iXc"/>
+                                            </constraints>
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Instructions" identifier="" id="PCV-IA-jZK">
@@ -860,7 +865,7 @@
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <textView editable="NO" importsGraphics="NO" baseWritingDirection="leftToRight" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" linkDetection="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="MVT-na-Gwl">
-                                                                <rect key="frame" x="0.0" y="0.0" width="223" height="133"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="223" height="238"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <size key="minSize" width="268" height="238"/>
@@ -971,6 +976,46 @@ Cgo
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="927"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V9c-Bz-8bw">
+            <objects>
+                <viewController id="VUJ-RD-Mlc" customClass="QRViewController" sceneMemberID="viewController">
+                    <view key="view" id="FVd-NG-lsD">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <webView translatesAutoresizingMaskIntoConstraints="NO" id="WKf-uZ-JRu">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <webPreferences key="preferences" identifier="QRView" defaultFontSize="12" defaultFixedFontSize="12"/>
+                            </webView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WKf-uZ-JRu" secondAttribute="trailing" id="7qk-Mj-b02"/>
+                            <constraint firstItem="WKf-uZ-JRu" firstAttribute="top" secondItem="FVd-NG-lsD" secondAttribute="top" id="BGr-mB-Psg"/>
+                            <constraint firstItem="WKf-uZ-JRu" firstAttribute="leading" secondItem="FVd-NG-lsD" secondAttribute="leading" id="FvI-GV-fGP"/>
+                            <constraint firstAttribute="bottom" secondItem="WKf-uZ-JRu" secondAttribute="bottom" id="mux-b5-XAP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="WKf-uZ-JRu" id="QVj-8W-ejS"/>
+                    </connections>
+                </viewController>
+                <customObject id="ZGw-zf-k4N" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="927"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cAM-JH-2gS">
+            <objects>
+                <viewController id="NIG-YZ-aM6" sceneMemberID="viewController">
+                    <view key="view" id="HiG-qx-x3E">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="2bj-GC-CtR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
