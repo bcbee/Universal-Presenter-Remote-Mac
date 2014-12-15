@@ -16,8 +16,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         NSApplication.sharedApplication().registerForRemoteNotificationTypes(.Alert)
         
-        
-        
     }
 
     func applicationWillTerminate(aNotification: NSNotification?) {
@@ -41,6 +39,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var tokens:NSArray = apns.objectForKey("token") as NSArray;
         
         NSLog(tokens.objectAtIndex(0) as NSString);
+        
+        let incomingToken: AnyObject = tokens.objectAtIndex(0)
+        
+        if !DBZ_ServerCommunication.enabled() {
+            DBZ_ServerCommunication.setTemptoken(String(incomingToken as NSString))
+            
+            NSNotificationCenter.defaultCenter().postNotificationName("QRActivate", object: nil)
+        }
         
     }
 

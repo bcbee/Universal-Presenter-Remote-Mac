@@ -20,6 +20,7 @@
 +(bool)enabled;
 +(NSString*)apns;
 +(void)setEnabled:(bool)changeto;
++(void)setTemptoken:(NSString*)changeto;
 
 +(void)getResponse:(NSString*)page withToken:(NSInteger)requestToken withHoldfor:(bool)holdfor;
 +(void)processResponse:(NSMutableArray*)webResponse;
@@ -36,5 +37,7 @@
 +(void)checkSlide:(NSTimer *)timer;
 +(void)connectSetup;
 +(void)setupApns:(NSData*)deviceToken;
++(void)setupAppNap;
+
 
 @end

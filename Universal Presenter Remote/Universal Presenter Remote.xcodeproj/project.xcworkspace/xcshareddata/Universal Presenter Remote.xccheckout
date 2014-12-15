@@ -14,7 +14,7 @@
 		<string>https://github.com/brendancboyle/Universal-Presenter-Remote-Mac.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Universal Presenter Remote/Universal Presenter Remote.xcodeproj/project.xcworkspace</string>
+	<string>Universal Presenter Remote/Universal Presenter Remote.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9D1F74FCDAD81773F10325CDF26BD75DFAE859F9</key>

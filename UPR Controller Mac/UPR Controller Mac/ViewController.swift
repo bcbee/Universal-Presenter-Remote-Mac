@@ -20,6 +20,7 @@ class ViewController: NSViewController, NSTextFieldDelegate  {
     @IBOutlet weak var token6: NSTextField!
     @IBOutlet weak var connectButton: NSButton!
     
+    @IBOutlet var tabView: NSTabView!
     
     @IBOutlet weak var QRView: WKWebView!
     
@@ -36,13 +37,14 @@ class ViewController: NSViewController, NSTextFieldDelegate  {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "alert:", name:"Alert", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateInterface:", name:"UpdateInterface", object: nil)
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "qrActivate:", name:"QRActivate", object: nil)
+        
         tokenFieldObjects = [token1, token2, token3, token4, token5, token6]
         
         DBZ_ServerCommunication.setupUid()
         
         token1.becomeFirstResponder()
         
-
     }
 
     override var representedObject: AnyObject? {
@@ -53,7 +55,7 @@ class ViewController: NSViewController, NSTextFieldDelegate  {
         
     }
     
-    @IBAction func connectButton(sender: AnyObject) {
+    @IBAction func connectButtonClicked(sender: AnyObject) {
         if DBZ_ServerCommunication.enabled() {
             DBZ_ServerCommunication.setEnabled(false)
             reset()
@@ -144,6 +146,24 @@ class ViewController: NSViewController, NSTextFieldDelegate  {
         token6.stringValue = ""
         tokenFields = ["","","","","",""]
         token1.becomeFirstResponder()
+    }
+    
+    func qrActivate(notification: NSNotification) {
+        
+        let token = Array(String(DBZ_ServerCommunication.temptoken()))
+        
+        tabView.selectFirstTabViewItem(nil)
+        
+        token1.stringValue = String(token[0])
+        token2.stringValue = String(token[1])
+        token3.stringValue = String(token[2])
+        token4.stringValue = String(token[3])
+        token5.stringValue = String(token[4])
+        token6.stringValue = String(token[5])
+        tokenFields = [String(token[0]),String(token[1]),String(token[2]),String(token[3]),String(token[4]),String(token[5])]
+        validateToken()
+        connectButtonClicked(NSObject);
+        connectButton.title = "Joining session..."
     }
 
 }

@@ -41,6 +41,10 @@ static NSString *apns = @"";
     [self updateInterface];
 }
 
++(void)setTemptoken:(NSString*)changeto {
+    temptoken = [changeto integerValue];
+}
+
 +(void)getResponse:(NSString*)page withToken:(NSInteger)requestToken withHoldfor:(bool)holdfor {
     __block NSString *result;
     NSString *strURL= [NSString stringWithFormat:@"%@/%@", serverAddress, page];
@@ -52,7 +56,7 @@ static NSString *apns = @"";
         strURL = [NSString stringWithFormat:@"%@&holdfor=%d", strURL, uid];
     }
     
-    NSLog(strURL);
+    NSLog(@"%@", strURL);
     
     NSURL *URL = [NSURL URLWithString:[strURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSURLRequest *requestURL = [[NSURLRequest alloc] initWithURL:URL];
@@ -189,7 +193,7 @@ static NSString *apns = @"";
         [[NSNotificationCenter defaultCenter] postNotification:notification];
         [DBZ_SlideControl setSlide:[response intValue]];
         if (enabled) {
-            activeTimer = [NSTimer scheduledTimerWithTimeInterval:0.75 target:self selector:@selector(checkSlide:) userInfo:nil repeats:NO];
+            activeTimer = [NSTimer scheduledTimerWithTimeInterval:0.50 target:self selector:@selector(checkSlide:) userInfo:nil repeats:NO];
         } else {
             [activeTimer invalidate];
         }
@@ -220,6 +224,10 @@ static NSString *apns = @"";
     apns = token;
     NSNotification* notification = [NSNotification notificationWithName:@"APNSReady" object:nil];
     [[NSNotificationCenter defaultCenter] postNotification:notification];
+}
+
++(void)setupAppNap {
+    
 }
 
 @end
