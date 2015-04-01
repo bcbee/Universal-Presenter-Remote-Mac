@@ -1032,6 +1032,6 @@ Cgo
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="256" height="256"/>
+        <image name="Logo" width="512" height="512"/>
     </resources>
 </document>

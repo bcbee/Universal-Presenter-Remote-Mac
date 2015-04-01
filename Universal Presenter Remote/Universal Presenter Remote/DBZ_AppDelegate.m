@@ -144,16 +144,9 @@ DBZ_InstructionView *instructionWindow;
 - (void)reset:(NSNotification *)notification
 {
     [_window makeKeyAndOrderFront:self];
-    _token1.stringValue = @"";
-    _token2.stringValue = @"";
-    _token3.stringValue = @"";
-    _token4.stringValue = @"";
-    _token5.stringValue = @"";
-    _token6.stringValue = @"";
-    _connectButton.title = @"Connect";
-    [_token1 becomeFirstResponder];
+    _connectButton.title = @"Connecting...";
     [DBZ_ServerCommunication setupUid];
-    [DBZ_ServerCommunication checkStatus];
+    [DBZ_ServerCommunication checkToken];
     [DBZ_SlideControl reset];
 }
 
