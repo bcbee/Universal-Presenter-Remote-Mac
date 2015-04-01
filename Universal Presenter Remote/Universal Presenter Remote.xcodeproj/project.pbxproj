@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B32B0F201ACC938F00139B06 /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B32B0F1F1ACC938F00139B06 /* Batman.ttf */; };
 		B391DB9A1925CABD00634BA7 /* DBZ_InstructionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B391DB981925CABD00634BA7 /* DBZ_InstructionView.m */; };
 		B391DB9B1925CABD00634BA7 /* DBZ_InstructionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B391DB991925CABD00634BA7 /* DBZ_InstructionView.xib */; };
 		B3D9A9C819AD8C7F005DE28C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D9A9C719AD8C7F005DE28C /* MainMenu.xib */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B32B0F1F1ACC938F00139B06 /* Batman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Batman.ttf; sourceTree = "<group>"; };
 		B391DB971925CABD00634BA7 /* DBZ_InstructionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_InstructionView.h; sourceTree = "<group>"; };
 		B391DB981925CABD00634BA7 /* DBZ_InstructionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_InstructionView.m; sourceTree = "<group>"; };
 		B391DB991925CABD00634BA7 /* DBZ_InstructionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DBZ_InstructionView.xib; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				ED70D5DC18FF14EE007B4C18 /* Universal Presenter Remote.entitlements */,
+				B32B0F1F1ACC938F00139B06 /* Batman.ttf */,
 				ED36A9EE18F870D4001247AB /* Classes */,
 				ED36A9ED18F870BE001247AB /* Interfaces */,
 				ED36A9EC18F870A5001247AB /* View Controllers */,
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED36A9B318F8702F001247AB /* InfoPlist.strings in Resources */,
+				B32B0F201ACC938F00139B06 /* Batman.ttf in Resources */,
 				ED36A9C118F8702F001247AB /* Images.xcassets in Resources */,
 				ED36A9E018F8706A001247AB /* DBZ_ConnectView.xib in Resources */,
 				B391DB9B1925CABD00634BA7 /* DBZ_InstructionView.xib in Resources */,
