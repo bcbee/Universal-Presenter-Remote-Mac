@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B32B0F1C1ACC5BC900139B06 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32B0F1B1ACC5BC900139B06 /* Sparkle.framework */; };
+		B32B0F1D1ACC5BC900139B06 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B32B0F1B1ACC5BC900139B06 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B33AEBE81A01FC4D00AD9381 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33AEBE71A01FC4D00AD9381 /* WebKit.framework */; };
-		B35335CF19BE5769007A1643 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35335CE19BE5769007A1643 /* Sparkle.framework */; };
-		B35335D019BE5775007A1643 /* Sparkle.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = B35335CE19BE5769007A1643 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3A88A5B1A020AA100A1811B /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A88A5A1A020AA100A1811B /* QRViewController.m */; };
 		B3D9A9A219AD86D2005DE28C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9A9A119AD86D2005DE28C /* main.swift */; };
 		B3D9A9A419AD86D2005DE28C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D9A9A319AD86D2005DE28C /* ViewController.swift */; };
@@ -32,22 +32,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B3111CFB19AFEDD4001F7F02 /* Copy Files */ = {
+		B32B0F1E1ACC5BC900139B06 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B35335D019BE5775007A1643 /* Sparkle.framework in Copy Files */,
+				B32B0F1D1ACC5BC900139B06 /* Sparkle.framework in Embed Frameworks */,
 			);
-			name = "Copy Files";
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B32B0F1B1ACC5BC900139B06 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		B33AEBE71A01FC4D00AD9381 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		B35335CE19BE5769007A1643 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = SOURCE_ROOT; };
 		B362CD9D19B8E83A00AED622 /* UPR Controller Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "UPR Controller Mac.entitlements"; sourceTree = "<group>"; };
 		B3A88A591A020AA100A1811B /* QRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRViewController.h; sourceTree = "<group>"; };
 		B3A88A5A1A020AA100A1811B /* QRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRViewController.m; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B33AEBE81A01FC4D00AD9381 /* WebKit.framework in Frameworks */,
-				B35335CF19BE5769007A1643 /* Sparkle.framework in Frameworks */,
+				B32B0F1C1ACC5BC900139B06 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +91,7 @@
 		B3D9A99319AD86D2005DE28C = {
 			isa = PBXGroup;
 			children = (
+				B32B0F1B1ACC5BC900139B06 /* Sparkle.framework */,
 				B33AEBE71A01FC4D00AD9381 /* WebKit.framework */,
 				B3B9FD0919AEC05500FAABD4 /* UPR_Controller_Mac-Bridging-Header.h */,
 				B3D9A99E19AD86D2005DE28C /* UPR Controller Mac */,
@@ -125,7 +126,6 @@
 		B3D9A99F19AD86D2005DE28C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B35335CE19BE5769007A1643 /* Sparkle.framework */,
 				B3D9A9A019AD86D2005DE28C /* Info.plist */,
 				B3D9A9A119AD86D2005DE28C /* main.swift */,
 			);
@@ -180,7 +180,7 @@
 				B3D9A99819AD86D2005DE28C /* Sources */,
 				B3D9A99919AD86D2005DE28C /* Frameworks */,
 				B3D9A99A19AD86D2005DE28C /* Resources */,
-				B3111CFB19AFEDD4001F7F02 /* Copy Files */,
+				B32B0F1E1ACC5BC900139B06 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -396,7 +396,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer: Brendan Boyle (6EM5FFNW2D)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer: Brendan Boyle (6EM5FFNW2D)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -406,7 +406,7 @@
 				);
 				INFOPLIST_FILE = "UPR Controller Mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3a2b8753-4bd3-4fb7-aa01-96ee11e42b27";
 				SWIFT_OBJC_BRIDGING_HEADER = "UPR_Controller_Mac-Bridging-Header.h";
@@ -417,7 +417,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer: Brendan Boyle (6EM5FFNW2D)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer: Brendan Boyle (6EM5FFNW2D)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -427,7 +427,7 @@
 				);
 				INFOPLIST_FILE = "UPR Controller Mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3a2b8753-4bd3-4fb7-aa01-96ee11e42b27";
 				SWIFT_OBJC_BRIDGING_HEADER = "UPR_Controller_Mac-Bridging-Header.h";
