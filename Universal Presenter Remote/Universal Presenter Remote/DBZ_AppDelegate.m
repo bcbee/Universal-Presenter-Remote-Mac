@@ -91,12 +91,14 @@ DBZ_InstructionView *instructionWindow;
     }
 }
 
+/*
 - (IBAction)presentButton:(id)sender {
     [_presentButton setEnabled:NO];
     NSString *presentToken = [NSString stringWithFormat:@"%@%@%@%@%@%@",[_token1 stringValue],[_token2 stringValue],[_token3 stringValue],[_token4 stringValue],[_token5 stringValue],[_token6 stringValue]];
-    int temp = [presentToken intValue];
+    //int temp = [presentToken intValue];
     //[DBZ_ServerCommunication joinSession:temp];
 }
+ */
 
 -(IBAction)connectButton:(id)sender {
     [_window orderOut:self];
