@@ -172,4 +172,7 @@ DBZ_InstructionView *instructionWindow;
     [DBZ_ServerCommunication checkToken];
 }
 
+- (IBAction)downloadController:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://universalpresenterremote.com"]];
+}
 @end

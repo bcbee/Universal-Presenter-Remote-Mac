@@ -100,15 +100,15 @@ class ViewController: NSViewController, NSTextFieldDelegate  {
     }
     
     func serverResponse(notification: NSNotification) {
-        var incoming: NSMutableArray! = notification.object as NSMutableArray
+        var incoming: NSMutableArray! = notification.object as! NSMutableArray
         DBZ_ServerCommunication.processResponse(incoming)
     }
     
     func alert(notification: NSNotification) {
-        var incoming: NSMutableArray! = notification.object as NSMutableArray
+        var incoming: NSMutableArray! = notification.object as! NSMutableArray
         let alert:NSAlert = NSAlert()
-        alert.messageText = incoming.objectAtIndex(0) as NSString
-        alert.informativeText = incoming.objectAtIndex(1) as NSString
+        alert.messageText = incoming.objectAtIndex(0) as! NSString as String
+        alert.informativeText = incoming.objectAtIndex(1) as! NSString as String
         alert.runModal()
         DBZ_ServerCommunication.updateInterface()
         reset()

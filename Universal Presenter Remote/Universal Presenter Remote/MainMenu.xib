@@ -777,13 +777,6 @@
                                             <rect key="frame" x="-41" y="-23" width="698" height="261"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="InstructionsBackground" id="cFQ-QG-0Wq"/>
                                         </imageView>
-                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nEa-fN-U6c">
-                                            <rect key="frame" x="5" y="9" width="188" height="32"/>
-                                            <buttonCell key="cell" type="push" title="Download Controller App" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0fc-V9-OqZ">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                        </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NdZ-KB-VRq">
                                             <rect key="frame" x="88" y="136" width="23" height="91"/>
                                             <constraints>
@@ -804,6 +797,17 @@
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2" id="BmW-Jh-Pe0">
                                                 <font key="font" size="85" name="BatmanForeverAlternate"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jUm-po-3aB">
+                                            <rect key="frame" x="513" y="136" width="73" height="91"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="69" id="xdu-w1-Fe5"/>
+                                            </constraints>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="3" id="bQX-8W-J3n">
+                                                <font key="font" size="85" name="BatmanForeverAlternate"/>
+                                                <color key="textColor" red="0.20392156859999999" green="0.023529411760000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
@@ -832,17 +836,16 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jUm-po-3aB">
-                                            <rect key="frame" x="513" y="136" width="73" height="91"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="69" id="xdu-w1-Fe5"/>
-                                            </constraints>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="3" id="bQX-8W-J3n">
-                                                <font key="font" size="85" name="BatmanForeverAlternate"/>
-                                                <color key="textColor" red="0.20392156859999999" green="0.023529411760000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nEa-fN-U6c">
+                                            <rect key="frame" x="5" y="4" width="188" height="32"/>
+                                            <buttonCell key="cell" type="push" title="Download Controller App" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0fc-V9-OqZ">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="downloadController:" target="Voe-Tx-rLC" id="Goj-W3-rvg"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="iXv-Gt-pwz" firstAttribute="centerX" secondItem="cGD-w4-GuN" secondAttribute="centerX" id="47z-Ie-euw"/>
@@ -850,9 +853,9 @@
                                         <constraint firstItem="cGD-w4-GuN" firstAttribute="top" secondItem="jUm-po-3aB" secondAttribute="top" id="94a-hP-zOB"/>
                                         <constraint firstItem="aU4-cF-Qq7" firstAttribute="leading" secondItem="UY7-Hy-dNl" secondAttribute="leading" constant="-41" id="DF9-GN-6QD"/>
                                         <constraint firstItem="iXv-Gt-pwz" firstAttribute="top" secondItem="IsQ-Q6-aO2" secondAttribute="top" id="FX5-w8-7JI"/>
-                                        <constraint firstItem="nEa-fN-U6c" firstAttribute="top" secondItem="J8a-jn-PZd" secondAttribute="bottom" constant="8" symbolic="YES" id="Igd-gW-XD9"/>
+                                        <constraint firstItem="nEa-fN-U6c" firstAttribute="top" secondItem="J8a-jn-PZd" secondAttribute="bottom" constant="13" id="Igd-gW-XD9"/>
                                         <constraint firstItem="cGD-w4-GuN" firstAttribute="top" secondItem="NdZ-KB-VRq" secondAttribute="top" id="JGh-y0-B0K"/>
-                                        <constraint firstAttribute="bottom" secondItem="nEa-fN-U6c" secondAttribute="bottom" constant="16" id="JwQ-7f-th7"/>
+                                        <constraint firstAttribute="bottom" secondItem="nEa-fN-U6c" secondAttribute="bottom" constant="11" id="JwQ-7f-th7"/>
                                         <constraint firstItem="NdZ-KB-VRq" firstAttribute="top" secondItem="UY7-Hy-dNl" secondAttribute="top" constant="-17" id="PYc-Fx-dm9"/>
                                         <constraint firstItem="aU4-cF-Qq7" firstAttribute="top" secondItem="UY7-Hy-dNl" secondAttribute="top" constant="-28" id="TZ2-6M-UUf"/>
                                         <constraint firstAttribute="trailing" secondItem="aU4-cF-Qq7" secondAttribute="trailing" constant="-3" id="VKz-FW-o33"/>

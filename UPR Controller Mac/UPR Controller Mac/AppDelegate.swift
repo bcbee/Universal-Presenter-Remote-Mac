@@ -12,42 +12,41 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                             
 
 
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
         //NSApplication.sharedApplication().registerForRemoteNotificationTypes(.Alert)
         
     }
 
-    func applicationWillTerminate(aNotification: NSNotification?) {
+    func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
     
     // implemented in your application delegate
-    func application(application: NSApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData!) {
+    func application(application: NSApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         println("Got token data! \(deviceToken)")
         DBZ_ServerCommunication.setupApns(deviceToken);
     }
     
-    func application(application: NSApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError!) {
+    func application(application: NSApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
         println("Couldn't register: \(error)")
     }
     
-    func application(application: NSApplication, didReceiveRemoteNotification userInfo:NSDictionary!) {
+    func application(application: NSApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         //Recieved Notification
         var apns:NSDictionary = userInfo as NSDictionary
         
-        var tokens:NSArray = apns.objectForKey("token") as NSArray;
+        var tokens:NSArray = apns.objectForKey("token") as! NSArray;
         
-        NSLog(tokens.objectAtIndex(0) as NSString);
+        NSLog(tokens.objectAtIndex(0) as! NSString as String);
         
         let incomingToken: AnyObject = tokens.objectAtIndex(0)
         
         if !DBZ_ServerCommunication.enabled() {
-            DBZ_ServerCommunication.setTemptoken(String(incomingToken as NSString))
+            DBZ_ServerCommunication.setTemptoken(String(incomingToken as! NSString))
             
             NSNotificationCenter.defaultCenter().postNotificationName("QRActivate", object: nil)
         }
-        
     }
 
 }
