@@ -33,11 +33,11 @@ class ViewController: NSViewController, NSTextFieldDelegate  {
 
         // Do any additional setup after loading the view.
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.serverResponse(_:)), name:"ServerResponse", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.alert(_:)), name:"Alert", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.updateInterface(_:)), name:"UpdateInterface", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.serverResponse(_:)), name:NSNotification.Name(rawValue: "ServerResponse"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.alert(_:)), name:NSNotification.Name(rawValue: "Alert"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.updateInterface(_:)), name:NSNotification.Name(rawValue: "UpdateInterface"), object: nil)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.qrActivate(_:)), name:"QRActivate", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.qrActivate(_:)), name:NSNotification.Name(rawValue: "QRActivate"), object: nil)
         
         tokenFieldObjects = [token1, token2, token3, token4, token5, token6]
         
@@ -46,16 +46,8 @@ class ViewController: NSViewController, NSTextFieldDelegate  {
         token1.becomeFirstResponder()
         
     }
-
-    override var representedObject: AnyObject? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-        
-        
-    }
     
-    @IBAction func connectButtonClicked(sender: AnyObject) {
+    @IBAction func connectButtonClicked(_ sender: AnyObject) {
         if DBZ_ServerCommunication.enabled() {
             DBZ_ServerCommunication.setEnabled(false)
             reset()
@@ -64,13 +56,13 @@ class ViewController: NSViewController, NSTextFieldDelegate  {
             let pt = Int(presentToken)
             DBZ_ServerCommunication.joinSession(pt!)
             connectButton.title = "Connecting..."
-            connectButton.enabled = false
+            connectButton.isEnabled = false
         }
     }
     
-    override func controlTextDidChange(obj: NSNotification) {
+    override func controlTextDidChange(_ obj: Notification) {
         
-        for (index, value) in tokenFieldObjects.enumerate() {
+        for (index, value) in tokenFieldObjects.enumerated() {
             if value.stringValue != tokenFields[index] {
                 if index < 5 {
                     tokenFieldObjects[index + 1].becomeFirstResponder()
@@ -90,53 +82,53 @@ class ViewController: NSViewController, NSTextFieldDelegate  {
     func validateToken() {
         var fieldsReady = 0;
         
-        for (index, value) in tokenFieldObjects.enumerate() {
+        for (index, value) in tokenFieldObjects.enumerated() {
             if (String(value.integerValue) == value.stringValue) {
                 fieldsReady += 1
             }
         }
         
         if fieldsReady == 6 {
-            connectButton.enabled = true
+            connectButton.isEnabled = true
         }
     }
     
-    func serverResponse(notification: NSNotification) {
+    func serverResponse(_ notification: Notification) {
         let incoming: NSMutableArray! = notification.object as! NSMutableArray
         DBZ_ServerCommunication.processResponse(incoming)
     }
     
-    func alert(notification: NSNotification) {
+    func alert(_ notification: Notification) {
         let incoming: NSMutableArray! = notification.object as! NSMutableArray
         let alert:NSAlert = NSAlert()
-        alert.messageText = incoming.objectAtIndex(0) as! NSString as String
-        alert.informativeText = incoming.objectAtIndex(1) as! NSString as String
+        alert.messageText = incoming.object(at: 0) as! NSString as String
+        alert.informativeText = incoming.object(at: 1) as! NSString as String
         alert.runModal()
         DBZ_ServerCommunication.updateInterface()
         reset()
         
     }
     
-    func updateInterface(notification: NSNotification) {
+    func updateInterface(_ notification: Notification) {
         if DBZ_ServerCommunication.enabled() {
             connectButton.title = "Disconnect"
-            token1.enabled = false
-            token2.enabled = false
-            token3.enabled = false
-            token4.enabled = false
-            token5.enabled = false
-            token6.enabled = false
+            token1.isEnabled = false
+            token2.isEnabled = false
+            token3.isEnabled = false
+            token4.isEnabled = false
+            token5.isEnabled = false
+            token6.isEnabled = false
         } else {
             connectButton.title = "Connect"
-            token1.enabled = true
-            token2.enabled = true
-            token3.enabled = true
-            token4.enabled = true
-            token5.enabled = true
-            token6.enabled = true
+            token1.isEnabled = true
+            token2.isEnabled = true
+            token3.isEnabled = true
+            token4.isEnabled = true
+            token5.isEnabled = true
+            token6.isEnabled = true
             
         }
-        connectButton.enabled = true
+        connectButton.isEnabled = true
     }
     
     func reset() {
@@ -150,7 +142,7 @@ class ViewController: NSViewController, NSTextFieldDelegate  {
         token1.becomeFirstResponder()
     }
     
-    func qrActivate(notification: NSNotification) {
+    func qrActivate(_ notification: Notification) {
         
         let token = Array(arrayLiteral: String(DBZ_ServerCommunication.temptoken()))
         
