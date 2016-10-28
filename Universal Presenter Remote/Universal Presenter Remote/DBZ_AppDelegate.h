@@ -23,8 +23,6 @@
 @property (weak) IBOutlet NSButton *presentButton;
 @property (weak) IBOutlet NSButton *connectButton;
 
-
-- (IBAction)presentButton:(id)sender;
 - (IBAction)connectButton:(id)sender;
 - (IBAction)instructionButton:(id)sender;
 - (IBAction)refresh:(id)sender;

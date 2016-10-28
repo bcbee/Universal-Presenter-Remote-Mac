@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D127a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="6751"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="11201"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -696,7 +695,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bmW-yS-t2k">
-                                                    <rect key="frame" x="39" y="199" width="226" height="29"/>
+                                                    <rect key="frame" x="40" y="199" width="225" height="29"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Enter the token from" id="tfj-jl-hdO">
                                                         <font key="font" metaFont="system" size="24"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -704,7 +703,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pdA-EZ-n2e">
-                                                    <rect key="frame" x="39" y="162" width="226" height="29"/>
+                                                    <rect key="frame" x="40" y="162" width="225" height="29"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="the UPR remote app" id="BAT-cI-TyH">
                                                         <font key="font" metaFont="system" size="24"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -842,20 +841,12 @@
                                             <rect key="frame" x="10" y="33" width="304" height="260"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <containerView hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anf-xE-yg6">
+                                                <containerView translatesAutoresizingMaskIntoConstraints="NO" id="anf-xE-yg6">
                                                     <rect key="frame" x="17" y="17" width="270" height="227"/>
                                                     <connections>
                                                         <segue destination="VUJ-RD-Mlc" kind="embed" id="cJJ-99-5VO"/>
                                                     </connections>
                                                 </containerView>
-                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cd-hu-iFH">
-                                                    <rect key="frame" x="56" y="181" width="192" height="46"/>
-                                                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" alignment="center" title="QR Code Generation Coming Soon!" id="DnB-K7-HEk">
-                                                        <font key="font" metaFont="system" size="19"/>
-                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                    </textFieldCell>
-                                                </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="anf-xE-yg6" secondAttribute="trailing" constant="17" id="ONK-if-nka"/>
@@ -873,11 +864,11 @@
                                                 <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ba3-DB-71J">
                                                     <rect key="frame" x="17" y="17" width="270" height="240"/>
                                                     <clipView key="contentView" id="53m-uP-tUq">
-                                                        <rect key="frame" x="1" y="1" width="223" height="133"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <rect key="frame" x="1" y="1" width="268" height="238"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <textView editable="NO" importsGraphics="NO" baseWritingDirection="leftToRight" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" linkDetection="YES" dataDetection="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="MVT-na-Gwl">
-                                                                <rect key="frame" x="0.0" y="0.0" width="223" height="238"/>
+                                                            <textView editable="NO" importsGraphics="NO" baseWritingDirection="leftToRight" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" linkDetection="YES" dataDetection="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="MVT-na-Gwl">
+                                                                <rect key="frame" x="0.0" y="0.0" width="268" height="238"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <size key="minSize" width="268" height="238"/>
@@ -888,8 +879,12 @@
                                                                             <font key="NSFont" size="18" name="Arial-BoldMT"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                                                 <tabStops>
-                                                                                    <textTab alignment="left" location="0.0"/>
-                                                                                    <textTab alignment="left" location="0.0"/>
+                                                                                    <textTab alignment="left" location="0.0">
+                                                                                        <options/>
+                                                                                    </textTab>
+                                                                                    <textTab alignment="left" location="0.0">
+                                                                                        <options/>
+                                                                                    </textTab>
                                                                                 </tabStops>
                                                                             </paragraphStyle>
                                                                         </attributes>
@@ -902,8 +897,12 @@ Cgo
                                                                             <font key="NSFont" size="20" name="Arial-BoldMT"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                                                 <tabStops>
-                                                                                    <textTab alignment="left" location="0.0"/>
-                                                                                    <textTab alignment="left" location="0.0"/>
+                                                                                    <textTab alignment="left" location="0.0">
+                                                                                        <options/>
+                                                                                    </textTab>
+                                                                                    <textTab alignment="left" location="0.0">
+                                                                                        <options/>
+                                                                                    </textTab>
                                                                                 </tabStops>
                                                                             </paragraphStyle>
                                                                         </attributes>
@@ -922,16 +921,18 @@ Cgo
                                                                             <font key="NSFont" size="12" name="ArialMT"/>
                                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
                                                                                 <tabStops>
-                                                                                    <textTab alignment="left" location="0.0"/>
-                                                                                    <textTab alignment="left" location="0.0"/>
+                                                                                    <textTab alignment="left" location="0.0">
+                                                                                        <options/>
+                                                                                    </textTab>
+                                                                                    <textTab alignment="left" location="0.0">
+                                                                                        <options/>
+                                                                                    </textTab>
                                                                                 </tabStops>
                                                                             </paragraphStyle>
                                                                         </attributes>
                                                                     </fragment>
                                                                 </attributedString>
                                                                 <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <size key="minSize" width="268" height="238"/>
-                                                                <size key="maxSize" width="463" height="10000000"/>
                                                             </textView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

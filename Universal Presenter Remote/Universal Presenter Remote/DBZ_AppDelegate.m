@@ -24,8 +24,6 @@ DBZ_InstructionView *instructionWindow;
         self.activity = [[NSProcessInfo processInfo] beginActivityWithOptions:0x00FFFFFF reason:@"receiving OSC messages"];
     }
     
-    
-    
     [[NSApplication sharedApplication] registerForRemoteNotificationTypes:(NSRemoteNotificationTypeBadge | NSRemoteNotificationTypeSound)];
     
     
@@ -34,13 +32,9 @@ DBZ_InstructionView *instructionWindow;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(joinSession:) name:@"JoinSession" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reset:) name:@"Reset" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshInterface:) name:@"Refresh" object:nil];
-    //[self.window setBackgroundColor: [NSColor colorWithRed:52.0f/255.0f green:6.0f/255.0f blue:54.0f/255.0f alpha:1.0f]];
     
     [DBZ_ServerCommunication setupUid];
     [DBZ_ServerCommunication checkStatus];
-    
-    //NSTimer *checkServerTimer = [NSTimer scheduledTimerWithTimeInterval:0.75 target:self selector:@selector(checkServer:) userInfo:nil repeats:YES];
-    
     
     presentWindow = [[DBZ_PresentView alloc] initWithWindowNibName:@"DBZ_PresentView"];
     connectWindow = [[DBZ_ConnectView alloc] initWithWindowNibName:@"DBZ_ConnectView"];
@@ -90,15 +84,6 @@ DBZ_InstructionView *instructionWindow;
         _presentButton.enabled = NO;
     }
 }
-
-/*
-- (IBAction)presentButton:(id)sender {
-    [_presentButton setEnabled:NO];
-    NSString *presentToken = [NSString stringWithFormat:@"%@%@%@%@%@%@",[_token1 stringValue],[_token2 stringValue],[_token3 stringValue],[_token4 stringValue],[_token5 stringValue],[_token6 stringValue]];
-    //int temp = [presentToken intValue];
-    //[DBZ_ServerCommunication joinSession:temp];
-}
- */
 
 -(IBAction)connectButton:(id)sender {
     [_window orderOut:self];

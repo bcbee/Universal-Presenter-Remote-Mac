@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B32B0F201ACC938F00139B06 /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B32B0F1F1ACC938F00139B06 /* Batman.ttf */; };
 		B391DB9A1925CABD00634BA7 /* DBZ_InstructionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B391DB981925CABD00634BA7 /* DBZ_InstructionView.m */; };
-		B391DB9B1925CABD00634BA7 /* DBZ_InstructionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B391DB991925CABD00634BA7 /* DBZ_InstructionView.xib */; };
 		B3D9A9C819AD8C7F005DE28C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D9A9C719AD8C7F005DE28C /* MainMenu.xib */; };
 		ED36A9A918F8702F001247AB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED36A9A818F8702F001247AB /* Cocoa.framework */; };
 		ED36A9B318F8702F001247AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED36A9B118F8702F001247AB /* InfoPlist.strings */; };
@@ -24,7 +23,6 @@
 		ED36A9DF18F8706A001247AB /* DBZ_ConnectView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED36A9DD18F8706A001247AB /* DBZ_ConnectView.m */; };
 		ED36A9E018F8706A001247AB /* DBZ_ConnectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED36A9DE18F8706A001247AB /* DBZ_ConnectView.xib */; };
 		ED36A9E418F8707B001247AB /* DBZ_PresentView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED36A9E218F8707B001247AB /* DBZ_PresentView.m */; };
-		ED36A9E518F8707B001247AB /* DBZ_PresentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED36A9E318F8707B001247AB /* DBZ_PresentView.xib */; };
 		ED36A9E818F87093001247AB /* DBZ_ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = ED36A9E718F87093001247AB /* DBZ_ServerCommunication.m */; };
 		ED36A9EB18F870A0001247AB /* DBZ_SlideControl.m in Sources */ = {isa = PBXBuildFile; fileRef = ED36A9EA18F870A0001247AB /* DBZ_SlideControl.m */; };
 /* End PBXBuildFile section */
@@ -43,7 +41,6 @@
 		B32B0F1F1ACC938F00139B06 /* Batman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Batman.ttf; sourceTree = "<group>"; };
 		B391DB971925CABD00634BA7 /* DBZ_InstructionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_InstructionView.h; sourceTree = "<group>"; };
 		B391DB981925CABD00634BA7 /* DBZ_InstructionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_InstructionView.m; sourceTree = "<group>"; };
-		B391DB991925CABD00634BA7 /* DBZ_InstructionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DBZ_InstructionView.xib; sourceTree = "<group>"; };
 		B3D9A9C719AD8C7F005DE28C /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		ED36A9A518F8702F001247AB /* Universal Presenter Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Presenter Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED36A9A818F8702F001247AB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -57,7 +54,6 @@
 		ED36A9B818F8702F001247AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		ED36A9BA18F8702F001247AB /* DBZ_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBZ_AppDelegate.h; sourceTree = "<group>"; };
 		ED36A9BB18F8702F001247AB /* DBZ_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBZ_AppDelegate.m; sourceTree = "<group>"; };
-		ED36A9BE18F8702F001247AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenuOld.xib; sourceTree = "<group>"; };
 		ED36A9C018F8702F001247AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ED36A9C618F8702F001247AB /* Universal Presenter RemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Universal Presenter RemoteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED36A9C718F8702F001247AB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -69,7 +65,6 @@
 		ED36A9DE18F8706A001247AB /* DBZ_ConnectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DBZ_ConnectView.xib; sourceTree = "<group>"; };
 		ED36A9E118F8707B001247AB /* DBZ_PresentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_PresentView.h; sourceTree = "<group>"; };
 		ED36A9E218F8707B001247AB /* DBZ_PresentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_PresentView.m; sourceTree = "<group>"; };
-		ED36A9E318F8707B001247AB /* DBZ_PresentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DBZ_PresentView.xib; sourceTree = "<group>"; };
 		ED36A9E618F87093001247AB /* DBZ_ServerCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ServerCommunication.h; sourceTree = "<group>"; };
 		ED36A9E718F87093001247AB /* DBZ_ServerCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_ServerCommunication.m; sourceTree = "<group>"; };
 		ED36A9E918F870A0001247AB /* DBZ_SlideControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_SlideControl.h; sourceTree = "<group>"; };
@@ -200,10 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				B3D9A9C719AD8C7F005DE28C /* MainMenu.xib */,
-				ED36A9BD18F8702F001247AB /* MainMenuOld.xib */,
 				ED36A9DE18F8706A001247AB /* DBZ_ConnectView.xib */,
-				ED36A9E318F8707B001247AB /* DBZ_PresentView.xib */,
-				B391DB991925CABD00634BA7 /* DBZ_InstructionView.xib */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -312,9 +304,7 @@
 				B32B0F201ACC938F00139B06 /* Batman.ttf in Resources */,
 				ED36A9C118F8702F001247AB /* Images.xcassets in Resources */,
 				ED36A9E018F8706A001247AB /* DBZ_ConnectView.xib in Resources */,
-				B391DB9B1925CABD00634BA7 /* DBZ_InstructionView.xib in Resources */,
 				ED36A9B918F8702F001247AB /* Credits.rtf in Resources */,
-				ED36A9E518F8707B001247AB /* DBZ_PresentView.xib in Resources */,
 				B3D9A9C819AD8C7F005DE28C /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,14 +367,6 @@
 				ED36A9B818F8702F001247AB /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		ED36A9BD18F8702F001247AB /* MainMenuOld.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED36A9BE18F8702F001247AB /* Base */,
-			);
-			name = MainMenuOld.xib;
 			sourceTree = "<group>";
 		};
 		ED36A9CF18F87030001247AB /* InfoPlist.strings */ = {
