@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:UPR Controller Mac/UPR Controller Mac.xcodeproj">
+      location = "group:UPR Remote/UPR Remote.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Universal Presenter Remote/Universal Presenter Remote.xcodeproj">
+      location = "group:UPR Controller Mac/UPR Controller Mac.xcodeproj">
    </FileRef>
 </Workspace>
