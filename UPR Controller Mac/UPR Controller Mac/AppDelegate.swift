@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
-        NSApplication.shared().registerForRemoteNotifications(matching: .alert)
+        NSApplication.shared.registerForRemoteNotifications(matching: NSApplication.RemoteNotificationType.alert)
         
     }
 

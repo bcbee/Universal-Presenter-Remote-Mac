@@ -93,12 +93,12 @@ class ViewController: NSViewController, NSTextFieldDelegate  {
         }
     }
     
-    func serverResponse(_ notification: Notification) {
+    @objc func serverResponse(_ notification: Notification) {
         let incoming: NSMutableArray! = notification.object as! NSMutableArray
         DBZ_ServerCommunication.processResponse(incoming)
     }
     
-    func alert(_ notification: Notification) {
+    @objc func alert(_ notification: Notification) {
         let incoming: NSMutableArray! = notification.object as! NSMutableArray
         let alert:NSAlert = NSAlert()
         alert.messageText = incoming.object(at: 0) as! NSString as String
@@ -109,7 +109,7 @@ class ViewController: NSViewController, NSTextFieldDelegate  {
         
     }
     
-    func updateInterface(_ notification: Notification) {
+    @objc func updateInterface(_ notification: Notification) {
         if DBZ_ServerCommunication.enabled() {
             connectButton.title = "Disconnect"
             token1.isEnabled = false
@@ -142,7 +142,7 @@ class ViewController: NSViewController, NSTextFieldDelegate  {
         token1.becomeFirstResponder()
     }
     
-    func qrActivate(_ notification: Notification) {
+    @objc func qrActivate(_ notification: Notification) {
         
         let token = Array(arrayLiteral: String(DBZ_ServerCommunication.temptoken()))
         
@@ -156,7 +156,7 @@ class ViewController: NSViewController, NSTextFieldDelegate  {
         token6.stringValue = String(token[5])
         //tokenFields = [String(token[0]),String(token[1]),String(token[2]),String(token[3]),String(token[4]),String(token[5])]
         validateToken()
-        connectButtonClicked(NSObject);
+        connectButtonClicked(NSObject.self);
         connectButton.title = "Joining session..."
     }
 

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -673,7 +674,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="700" height="400"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <value key="minSize" type="size" width="700" height="400"/>
             <view key="contentView" id="AaU-YP-ahF">
                 <rect key="frame" x="0.0" y="0.0" width="700" height="400"/>
@@ -703,7 +704,7 @@
                                                 <constraint firstAttribute="width" constant="256" id="x72-CP-2de"/>
                                             </constraints>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="..." id="jN7-he-nUY">
-                                                <font key="font" size="35" name="BatmanForeverAlternate"/>
+                                                <font key="font" metaFont="system" size="35"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -769,12 +770,12 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Instructions" identifier="1" id="pOU-Vn-RrV">
-                                <view key="view" id="UY7-Hy-dNl">
+                                <view key="view" misplaced="YES" id="UY7-Hy-dNl">
                                     <rect key="frame" x="10" y="33" width="654" height="210"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aU4-cF-Qq7">
-                                            <rect key="frame" x="-41" y="-23" width="698" height="261"/>
+                                            <rect key="frame" x="-41" y="-23" width="3100" height="261"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="InstructionsBackground" id="cFQ-QG-0Wq"/>
                                         </imageView>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NdZ-KB-VRq">
@@ -784,29 +785,29 @@
                                                 <constraint firstAttribute="height" constant="91" id="cKO-B9-tPF"/>
                                             </constraints>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1" id="SWk-Xp-c4z">
-                                                <font key="font" size="85" name="BatmanForeverAlternate"/>
+                                                <font key="font" metaFont="system" size="85"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cGD-w4-GuN">
-                                            <rect key="frame" x="291" y="136" width="73" height="91"/>
+                                            <rect key="frame" x="1492" y="136" width="73" height="91"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="69" id="IrF-q5-d69"/>
                                             </constraints>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="2" id="BmW-Jh-Pe0">
-                                                <font key="font" size="85" name="BatmanForeverAlternate"/>
+                                                <font key="font" metaFont="system" size="85"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jUm-po-3aB">
-                                            <rect key="frame" x="513" y="136" width="73" height="91"/>
+                                            <rect key="frame" x="2915" y="136" width="73" height="91"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="69" id="xdu-w1-Fe5"/>
                                             </constraints>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="3" id="bQX-8W-J3n">
-                                                <font key="font" size="85" name="BatmanForeverAlternate"/>
+                                                <font key="font" metaFont="system" size="85"/>
                                                 <color key="textColor" red="0.20392156859999999" green="0.023529411760000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
@@ -820,7 +821,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iXv-Gt-pwz">
-                                            <rect key="frame" x="240" y="45" width="174" height="83"/>
+                                            <rect key="frame" x="1441" y="45" width="174" height="83"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Enter the token provided by this app, the remote software, into the control software and click connect." id="a1t-W7-LPj">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -828,7 +829,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IsQ-Q6-aO2">
-                                            <rect key="frame" x="471" y="5" width="174" height="123"/>
+                                            <rect key="frame" x="1672" y="5" width="1375" height="123"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="f0q-BR-gZA">
                                                 <font key="font" metaFont="system"/>
                                                 <string key="title">You can now open the presentation software of choice and begin presenting. Click the Next, Previous, and Media to control your presentation from anywhere in the world</string>
