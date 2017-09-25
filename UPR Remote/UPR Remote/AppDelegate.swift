@@ -17,12 +17,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
-        storyboard = NSStoryboard.init(name: "Main", bundle: nil)
+        storyboard = NSStoryboard.init(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
         if storyboard != nil {
             controller = storyboard?.instantiateInitialController() as? NSWindowController
         }
         
-        NSApplication.shared().registerForRemoteNotifications(matching: [.alert, .sound, .badge])
+        NSApplication.shared.registerForRemoteNotifications(matching: [NSApplication.RemoteNotificationType.alert, NSApplication.RemoteNotificationType.sound, NSApplication.RemoteNotificationType.badge])
         
         NotificationCenter.default.addObserver(self, selector: #selector(serverResponse), name: NSNotification.Name(rawValue: "ServerResponse"), object: nil)
         
@@ -59,7 +59,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
     
-    func serverResponse(notification:NSNotification) {
+    @objc func serverResponse(notification:NSNotification) {
         DBZ_ServerCommunication.processResponse(notification.object as! NSMutableArray)
     }
     

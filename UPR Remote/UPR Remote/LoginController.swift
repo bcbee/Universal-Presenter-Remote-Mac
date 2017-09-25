@@ -33,14 +33,14 @@ class LoginController: NSViewController {
     }
     
     @IBAction func downloadController(_ sender: Any) {
-        NSWorkspace.shared().open(URL(string: "https://universalpresenterremote.com")!)
+        NSWorkspace.shared.open(URL(string: "https://universalpresenterremote.com")!)
     }
 
     @IBAction func connectButton(_ sender: Any) {
-        performSegue(withIdentifier: "ControlSegue", sender: self)
+        performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "ControlSegue"), sender: self)
     }
     
-    func updateInterface(notification:NSNotification) {
+    @objc func updateInterface(notification:NSNotification) {
         let token = DBZ_ServerCommunication.temptoken()
         switch DBZ_ServerCommunication.controlmode() {
         case 1:

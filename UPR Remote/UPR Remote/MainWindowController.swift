@@ -20,7 +20,7 @@ class MainWindowController: NSWindowController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateInterface), name: NSNotification.Name(rawValue: "UpdateInterface"), object: nil)
     }
     
-    func updateInterface(notification:NSNotification) {
+    @objc func updateInterface(notification:NSNotification) {
         switch DBZ_ServerCommunication.controlmode() {
         case 1:
             connectTB.title = "Waiting..."
